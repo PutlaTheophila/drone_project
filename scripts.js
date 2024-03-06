@@ -52,7 +52,11 @@ var map;
                         position: { lat: latitude, lng: longitude },
                         map: map,
                         label: (index + 1).toString(), // Display the number as label
-                        title: name
+                        title: name,
+                        icon:{
+                            url: 'drone-icon.png', // Path to your drone icon
+                            scaledSize: new google.maps.Size(24, 24) // Size of the icon
+                        }
                     });
                     markers.push(marker);
                 }
