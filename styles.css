@@ -31,6 +31,24 @@ footer {
     width: 100%;
 }
 
+button {
+    padding: 16px 24px; /* Larger padding for bigger buttons */
+    font-size: 18px;
+    background-color: #4CAF50; /* Green color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Center buttons at the top */
+#toggle-btn {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 table {
     border-collapse: collapse;
     width: 100%;
