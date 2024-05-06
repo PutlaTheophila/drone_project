@@ -42,25 +42,33 @@ var map;
             }
         
 
-            data.forEach((coord, index) => {
+            data.forEach((coord) => {
                 const name = coord[0];
                 const latitude = parseFloat(coord[2]); 
                 const longitude = parseFloat(coord[3]); 
-        
+                const personsDetected = coord[4]; // Assuming persons detected is in the fifth column
+            
                 if (!isNaN(latitude) && !isNaN(longitude)) {
                     const marker = new google.maps.Marker({
                         position: { lat: latitude, lng: longitude },
                         map: map,
-                        label: (index + 1).toString(), // Display the number as label
+                        label: {
+                            text: personsDetected.toString(), // Display the number of persons detected
+                            color: 'red', // Set the label color to red
+                            fontWeight: 'bold', // Make the label text bold
+                            fontSize: '16px', // Increase the font size
+                        },
                         title: name,
                         icon: {
-                            url: 'survivor.png', // Path to your drone icon
+                            url: 'survivor-2.png', // Path to your drone icon
                             scaledSize: new google.maps.Size(24, 24) // Size of the icon
                         }
                     });
                     markers.push(marker);
                 }
             });
+            
+            
         
             // Create a Polyline connecting all coordinates with one another
             const coordinates = data.map(coord => ({
