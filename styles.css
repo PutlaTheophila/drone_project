@@ -52,7 +52,7 @@ th {
 button {
     padding: 16px 24px; /* Larger padding for bigger buttons */
     font-size: 18px;
-    background-color: #4CAF50; /* Green color */
+    background-color:darkblue; /* Green color */
     color: #fff;
     border: none;
     border-radius: 5px;
