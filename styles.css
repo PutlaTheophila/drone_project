@@ -67,6 +67,8 @@ button {
     transform: translate(-50%, -50%);
 }
 
+
+
 /* Media query for mobile responsiveness */
 @media only screen and (max-width: 600px) {
     button {
